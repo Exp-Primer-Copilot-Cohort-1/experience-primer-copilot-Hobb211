@@ -69,7 +69,3 @@ app.put('/posts/:postId/comments/:id', (req, res) => {
 });
 
 //Delete a comment
-app.delete('/posts/:postId/comments/:id', (req, res) => {
-    Comment.findByIdAndRemove(req.params.id, (err, deletedComment) => {
-        if (err) {
-            res.status(500).json(err);
